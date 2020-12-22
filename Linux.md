@@ -3,7 +3,7 @@
 ## SSH
 
 - 帳密直接登
-    ```
+    ```bash
     sudo apt-get install sshpass
     sshpass -p your_password ssh user@hostname
     ```
