@@ -11,7 +11,6 @@ set http_proxy=socks5://<remote-server>:<port>
 * 能夠代理port到公網
 
 ## windows 開 3389
-* https://www.itread01.com/content/1552895939.html
 
 ```batch
 net user <username> <password> /add
@@ -26,6 +25,7 @@ net localgroup Administrators <username> /add
 ```batch
 REG ADD HKLM\SYSTEM\CurrentControlSet\Control\Terminal" "Server /v fDenyTSConnections /t REG_DWORD /d 00000000 /f
 ```
+> Reference：https://www.itread01.com/content/1552895939.html
 
 ## Windows Tricks
 * windows監控遠端task跟service

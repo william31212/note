@@ -165,7 +165,7 @@ kill -9 ${pid_of_q}                                    //強制砍掉剛才丟�
 - 看 Port `/proc/net/tcp`
 - http://wp.blkstone.me/2018/06/abusing-arbitrary-file-read/#421
 
-## 網路ip
+## 網路 IP
 
 - https://en.ipip.net/
 - `traceroute`
@@ -175,7 +175,7 @@ kill -9 ${pid_of_q}                                    //強制砍掉剛才丟�
     - openflow
     - sdn
 
-## Search exploit
+## Search Exploit
 
 ```bash
 searchsploit <keyword>
