@@ -36,16 +36,6 @@ ssh -NfR <remote-port>:localhost:22 <remote-server>
 ssh -ND 0.0.0.0:<local-port> <user>@<remote-server>
 ```
 
-- CMD 設定proxy
-
-```bash
-set http_proxy=socks5://<remote-server>:<port>
-```
-
-## lcx
-
-- 代理port到公網
-
 ## Sudo
 
 * To root
@@ -143,13 +133,12 @@ python3 del powerline_setup
 * https://blog.gtwang.org/linux/powerline-adds-powerful-statuslines-and-prompts-to-vim-and-bash/
 
 
-### command
-- http://www.vixual.net/blog/archives/234
+### Command
+- [Vim 指令大全](http://www.vixual.net/blog/archives/234)
 
-## Shell-script
+## Shell Script
 
-- 無窮迴圈
-
+* 無窮迴圈
 ```bash
 while :
 do
@@ -157,17 +146,23 @@ do
 done
 ```
 
-- 切割字串`substr`
+* 切割字串 `substr`
     - 1-index
         `echo ${} | cut -c1-5`
 
-- http://wiki.weithenn.org/cgi-bin/wiki.pl?Script_%E6%8C%87%E4%BB%A4%E6%8A%80%E5%B7%A7
-
-
+- 背景執行
+```
+echo 'Starting Logging Server on Host B...'            //顯示字串
+ssh hostb.weithenn.org 'sudo /home/logging.sh' &       //控制遠端主機 B 執行 logging.sh，並丟到背景執行
+pid_of_q="$!"                                          //抓取上一行丟到背景執行的 Process ID
+sleep 5                                                //休息 5 秒 (不然下一行會砍不掉)
+kill -9 ${pid_of_q}                                    //強制砍掉剛才丟到背景執行的 Process ID (當然這時遠端主機 B 的 logging.sh 是有在執行的)
+```
+> Reference: http://wiki.weithenn.org/cgi-bin/wiki.pl?Script_%E6%8C%87%E4%BB%A4%E6%8A%80%E5%B7%A7
 
 ## linux 敏感檔案
 
-- 看port`/proc/net/tcp`
+- 看 Port `/proc/net/tcp`
 - http://wp.blkstone.me/2018/06/abusing-arbitrary-file-read/#421
 
 ## 網路ip
@@ -180,7 +175,7 @@ done
     - openflow
     - sdn
 
-## search exploit
+## Search exploit
 
 ```bash
 searchsploit <keyword>
@@ -194,22 +189,6 @@ searchsploit <keyword>
 ```bash=
 sudo tcpdump -i <卡> -w <檔案>
 ```
-
-## windows 開3389
-- https://www.itread01.com/content/1552895939.html
-
-## webshell
-https://www.webshell.cc/4422.html
-
-
-## shodan
-![](https://i.imgur.com/qBAtBQB.png)
-
-
-## reverse-shell upload file
-
-- upload-file
-- https://ironhackers.es/en/cheatsheet/transferir-archivos-post-explotacion-cheatsheet
 
 ## pipenv
 
