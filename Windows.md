@@ -12,6 +12,7 @@ set http_proxy=socks5://<remote-server>:<port>
 
 ## windows 開 3389
 
+* 新增使用者
 ```batch
 net user <username> <password> /add
 ```
@@ -27,8 +28,9 @@ REG ADD HKLM\SYSTEM\CurrentControlSet\Control\Terminal" "Server /v fDenyTSConnec
 ```
 > Reference：https://www.itread01.com/content/1552895939.html
 
+
 ## Windows Tricks
-* windows監控遠端task跟service
+* windows監控遠端`task`跟`service`
     - `sc` `tasklist`
     - https://www.raymond.cc/blog/remotely-start-and-stop-applications-or-services-over-the-internet/
 * [送windows通知](http://vaskovsky.net/notify-send/)

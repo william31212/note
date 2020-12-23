@@ -20,7 +20,8 @@
 ## 生活駭客
 
 * [Word 放 Code](http://www.planetb.ca/projects/syntaxHighlighter)
-* [Android 螢幕投影](https://www.google.com/search?q=apowermirror&oq=apowermirror&aqs=chrome..69i57j0l7.5587j0j7&sourceid=chrome&ie=UTF-8)
+* [Android 螢幕投影](https://github.com/Genymobile/scrcpy)
+    * `choco install scrcpy`, `choco install adb`, `scrcpy`
 * [Bash Command Search](https://ss64.com/)
 * [7z-CLI-用法](https://www.cnblogs.com/sparkdev/p/5598062.html)
     ```bash
