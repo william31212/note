@@ -3,10 +3,10 @@
 ## SSH
 
 - 帳密直接登
-    ```bash
-    sudo apt-get install sshpass
-    sshpass -p your_password ssh user@hostname
-    ```
+```bash
+sudo apt-get install sshpass
+sshpass -p your_password ssh user@hostname
+```
 
 - set `publickey` 設定
     - https://blog.gtwang.org/linux/linux-ssh-public-key-authentication/
@@ -182,23 +182,12 @@ searchsploit <keyword>
 ```
 
 ## 錄封包
-
 - https://mozillazg.com/2015/05/open-tcpdump-result-with-wireshark-gui.html
 
-### tcpdump
-```bash=
+### Tcpdump
+```bash
 sudo tcpdump -i <卡> -w <檔案>
 ```
 
-## pipenv
-
-- https://medium.com/@chihsuan/pipenv-%E6%9B%B4%E7%B0%A1%E5%96%AE-%E6%9B%B4%E5%BF%AB%E9%80%9F%E7%9A%84-python-%E5%A5%97%E4%BB%B6%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-135a47e504f4
-
-
-```
-union select 1,2,group_concat(schema_name),4 from information_schema.schemata#
-```
-
 ## hashcat
-
 * https://xz.aliyun.com/t/4008

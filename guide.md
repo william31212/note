@@ -2,11 +2,14 @@
 
 * This note is build by [docsifyjs](https://github.com/docsifyjs)
 * Theme is [Simple Dark](https://jhildenbiddle.github.io/docsify-themeable/#/themes)
-    * [Theme]
+    * If you want to change theme, you only import below css script
+    ```html
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
+    ```
+
 ## Build
 
 * Install npm package
-
 ```bash
 npm i docsify-cli -g
 ```

