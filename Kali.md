@@ -45,6 +45,13 @@ https://www.itread01.com/content/1543852627.html
 
 ## Metasploit
 
+
+### Search Exploit
+
+```bash
+searchsploit <keyword>
+```
+
 ### practice
 - `ctfthemes.appspot.com`
 

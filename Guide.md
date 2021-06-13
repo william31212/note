@@ -30,7 +30,6 @@ docsify init ./docs
 docsify serve docs
 ```
 
-
 * You can read the below reference to expand the features, e.g. sidebar, code highlighting...
 
 > Reference：https://docsify.js.org/#/quickstart

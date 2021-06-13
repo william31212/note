@@ -1,4 +1,4 @@
-# Linux
+# Linux_Command
 
 ## SSH
 
@@ -57,86 +57,14 @@ ssh -ND 0.0.0.0:<local-port> <user>@<remote-server>
 * * * * * <shellscript-pos>
 ```
 
-## Tmux
-* attach 其他視窗
-    * `tmux -S /tmp/tmux-<num>/default`
-* 查
-    * https://blog.chh.tw/posts/tmux-terminal-multiplexer/
-    * https://hackmd.io/Xxa8sfyAT2inRgkVQ2M6Gw?view
-    * http://tmuxcheatsheet.com/
-
-## oh-my-zsh install
-
-```bash
-sudo apt update
-sudo apt upgrade
-sudo apt install zsh
-sudo apt install git
-cat /etc/shells
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-chsh -s /bin/zsh
-
-sudo apt install powerline
-sudo apt install fonts-powerline
-```
-
-* change Theme(powerlevel9k)
-    * `git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k`
-    * edit `~/.zshrc`
-        ```cmd=
-        ZSH_THEME="powerlevel9k/powerlevel9k"
-        ```
-        ```
-        # command line 左邊想顯示的內容
-        POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir) # <= left prompt 設了 "dir"
-        # command line 右邊想顯示的內容
-        POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time) # <= right prompt 設了 "time"
-        ```
-
-## Vim
-
-### plugin
-
-* powerline plugin
-```bash
-sudo apt install python3-pip
-pip3 install –user powerline-status
-```
-* add in `.vimrc`
-```bash
-set laststatus=2
-set t_Co=256
-python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
-python3 del powerline_setup
-```
-
-
-* `.vimrc`
-```vim
-syntax on
-set guifont=Consolas:h11
-set nu ts=4 sw=4 sts=4 et ai si cin hls ru t_Co=256
-set mouse=a bs=2 ci nocp ar fencs=utf-8
-set sm mat=0
-filetype plugin indent on
-inoremap {<CR>  {<CR>}<Esc>O
-nnoremap <C-Up> <Up>ddp<Up>
-nnoremap <C-Down> ddp
-set laststatus=2
-set t_Co=256
-python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
-python3 del powerline_setup
-```
-
-* https://blog.gtwang.org/linux/powerline-adds-powerful-statuslines-and-prompts-to-vim-and-bash/
 
 
 ### Command
 - [Vim 指令大全](http://www.vixual.net/blog/archives/234)
 
 ## Shell Script
+
+* [Introduction-to-bash-scripting](https://github.com/bobbyiliev/introduction-to-bash-scripting)
 
 * 無窮迴圈
 ```bash
@@ -160,12 +88,12 @@ kill -9 ${pid_of_q}                                    //強制砍掉剛才丟�
 ```
 > Reference: http://wiki.weithenn.org/cgi-bin/wiki.pl?Script_%E6%8C%87%E4%BB%A4%E6%8A%80%E5%B7%A7
 
-## linux 敏感檔案
+## Linux Sensitive file
 
 - 看 Port `/proc/net/tcp`
 - http://wp.blkstone.me/2018/06/abusing-arbitrary-file-read/#421
 
-## 網路 IP
+## Network Related
 
 - https://en.ipip.net/
 - `traceroute`
@@ -175,19 +103,12 @@ kill -9 ${pid_of_q}                                    //強制砍掉剛才丟�
     - openflow
     - sdn
 
-## Search Exploit
+## Tcpdump (錄封包)
 
-```bash
-searchsploit <keyword>
-```
-
-## 錄封包
-- https://mozillazg.com/2015/05/open-tcpdump-result-with-wireshark-gui.html
-
-### Tcpdump
 ```bash
 sudo tcpdump -i <卡> -w <檔案>
 ```
+> Ref: https://mozillazg.com/2015/05/open-tcpdump-result-with-wireshark-gui.html
 
 ## hashcat
 * https://xz.aliyun.com/t/4008
