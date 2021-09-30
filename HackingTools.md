@@ -122,3 +122,17 @@ gethostbyname('@127.0.0.1') == '@127.0.0.1'
 ## 滲透相關，有點東西
 
 * https://ironhackers.es/en/cheatsheet/transferir-archivos-post-explotacion-cheatsheet/
+
+### JailBreak
+
+* IOS 越獄
+    * https://checkra.in/
+
+### 監控
+
+* frida
+    * https://frida.re/
+* ARM converter
+    * https://armconverter.com/
+* .ipa 重新簽名
+    * https://coderwall.com/p/cea3fw/resign-ipa-with-new-distribution-certificate
